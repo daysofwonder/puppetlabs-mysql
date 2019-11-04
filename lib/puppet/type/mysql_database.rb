@@ -7,6 +7,7 @@ Puppet::Type.newtype(:mysql_database) do
   PUPPET
 
   ensurable
+  apply_to_all
 
   autorequire(:file) { '/root/.my.cnf' }
   autorequire(:class) { 'mysql::server' }

@@ -11,6 +11,7 @@ Puppet::Type.newtype(:mysql_plugin) do
   PUPPET
 
   ensurable
+  apply_to_all
 
   autorequire(:file) { '/root/.my.cnf' }
 

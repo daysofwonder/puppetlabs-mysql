@@ -7,6 +7,7 @@ Puppet::Type.newtype(:mysql_datadir) do
     PUPPET
 
   ensurable
+  apply_to_all
 
   autorequire(:package) { 'mysql-server' }
 

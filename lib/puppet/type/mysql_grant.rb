@@ -4,6 +4,7 @@ Puppet::Type.newtype(:mysql_grant) do
       Manage a MySQL user's rights.
     PUPPET
   ensurable
+  apply_to_all
 
   autorequire(:file) { '/root/.my.cnf' }
   autorequire(:mysql_user) { self[:user] }
